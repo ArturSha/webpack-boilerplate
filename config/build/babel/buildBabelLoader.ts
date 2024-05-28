@@ -1,4 +1,4 @@
-import {BuildOptions} from "../types/types";
+import { BuildOptions } from "../types";
 import {removeDataTestIdBabelPlugin} from "./removeDataTestIdBabelPlugin";
 
 export function buildBabelLoader({mode}: BuildOptions) {
@@ -17,11 +17,12 @@ export function buildBabelLoader({mode}: BuildOptions) {
     }
 
     return {
-        test: /\.tsx?$/,
         exclude: /node_modules/,
+        test: /\.tsx?$/,
         use: {
             loader: "babel-loader",
             options: {
+                plugins: plugins.length ? plugins : undefined,
                 presets: [
                     '@babel/preset-env',
                     "@babel/preset-typescript",
@@ -32,7 +33,6 @@ export function buildBabelLoader({mode}: BuildOptions) {
                         }
                     ]
                 ],
-                plugins: plugins.length ? plugins : undefined,
             }
         }
     }

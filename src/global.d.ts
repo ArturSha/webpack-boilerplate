@@ -15,4 +15,4 @@ declare module '*.svg' {
   export default SVG;
 }
 
-declare const __ENV__: 'production' | 'development';
+declare const __ENV__: 'development' | 'production';

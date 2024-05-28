@@ -1,16 +1,16 @@
 export interface BuildPaths {
   entry: string;
   html: string;
-  public: string;
   output: string;
+  public: string;
   src: string;
 }
 
-export type BuildMode = 'production' | 'development';
+export type BuildMode = 'development' | 'production';
 
 export interface BuildOptions {
-  port: number;
-  paths: BuildPaths;
-  mode: BuildMode;
   analyzer?: boolean;
+  mode: BuildMode;
+  paths: BuildPaths;
+  port: number;
 }

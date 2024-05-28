@@ -1,0 +1,47 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react/recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:import/recommended",
+        "plugin:jsx-a11y/recommended",
+        "plugin:@conarti/feature-sliced/recommended",
+        "@feature-sliced",
+        "plugin:perfectionist/recommended-natural",
+        "prettier"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "settings": {"import/resolver": {
+        "typescript": {
+          "alwaysTryTypes": true
+        }
+      }},
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+          },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "@typescript-eslint",
+        "react"
+    ],
+    "rules": {
+        "no-console": 1,
+        "react/react-in-jsx-scope": "off",
+        "import/order": "off",
+        "import/no-internal-modules": [
+            "error",
+            {
+              "allow": ["**/*.jpg", "**/*.jpeg", "**/*.png", "**/*.gif", "**/*.svg",  "**/*.css"]
+            }
+          ]
+        }
+    }
+

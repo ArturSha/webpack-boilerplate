@@ -1,11 +1,9 @@
 import { createBrowserRouter } from 'react-router-dom';
 
-import { App } from '@/app/App';
+import { App } from '../../../App';
 
 export const router = createBrowserRouter([
   {
-    path: '/',
-    element: <App />,
     children: [
       // {
       //     path: '/about',
@@ -16,5 +14,7 @@ export const router = createBrowserRouter([
       //     element: <Suspense fallback={'Loading...'}><Shop /></Suspense>
       // },
     ],
+    element: <App />,
+    path: '/',
   },
 ]);
