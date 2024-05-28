@@ -16,11 +16,16 @@
         "prettier"
     ],
     "parser": "@typescript-eslint/parser",
-    "settings": {"import/resolver": {
-        "typescript": {
-          "alwaysTryTypes": true
+    "settings": {
+        "import/resolver": {
+             "typescript": {
+                 "alwaysTryTypes": true
         }
-      }},
+      },
+      "react": {
+        "version": "999.999.999"
+      }
+    },
     "parserOptions": {
         "ecmaFeatures": {
             "jsx": true
@@ -32,6 +37,7 @@
         "@typescript-eslint",
         "react"
     ],
+    
     "rules": {
         "no-console": 1,
         "react/react-in-jsx-scope": "off",
@@ -39,9 +45,17 @@
         "import/no-internal-modules": [
             "error",
             {
-              "allow": ["**/*.jpg", "**/*.jpeg", "**/*.png", "**/*.gif", "**/*.svg",  "**/*.css"]
+              "allow": ["**/*.jpg", "**/*.jpeg", "**/*.png", "**/*.gif", "**/*.svg",  "**/*.css", "**/index.ts", "react-dom/client"]
             }
           ]
-        }
+        },
+        "overrides": [
+            {
+              "files": ["webpack.config.ts"],
+              "rules": {
+                "import/no-internal-modules": "off"
+              }
+            }
+          ]
     }
 
