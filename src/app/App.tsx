@@ -1,6 +1,6 @@
+import imag from '@/assets/avatar.jpg';
 import { Suspense, useCallback, useState } from 'react';
 
-import imag from '../assets/avatar.jpg';
 import cls from './Test.module.css';
 import './styles/App.css';
 import './styles/reset.css';
